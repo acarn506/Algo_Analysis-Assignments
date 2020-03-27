@@ -13,8 +13,8 @@
 - Servo Motors (3 arm joints) - is dependent on the control system to update motor positions.  
 
 ### Interfaces 
-- Accelerometer - data of measurements along the xyz axis.  
-- Image Sensor - visual feedback.  
+- Accelerometer - collects data of measurements along the xyz axis.  
+- Image Sensor - collects visual feedback data.  
 
 #### ( b )
 
@@ -36,13 +36,13 @@ ii.
 
 #### ( b )
 i.  
-     - Software Subsystem
-     - Control System
-     - Robotic Arm 
-     - ImageSensor
-     - Accelerometer 
-     - ServoMotors  
-     - parts 
+- Software Subsystem
+- Control System
+- Robotic Arm 
+- ImageSensor
+- Accelerometer 
+- ServoMotors  
+- parts 
      
 ii. 
 
