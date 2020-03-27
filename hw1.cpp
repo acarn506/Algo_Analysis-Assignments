@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int main() {
     int n;
     int duplicates = 0;
@@ -16,11 +15,14 @@ int main() {
         cin >> ary[i];
     }
 
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (ary[i] == ary[j]) {
-                duplicates++;
-            }
+    sort(ary, ary+n);
+
+    for (int i = 0; i < n-1; i++) {
+        if (ary[i] == ary[i+1]) {
+            duplicates++;
+        }
+        else {
+            ary[i+1] = ary[i];
         }
     }
 

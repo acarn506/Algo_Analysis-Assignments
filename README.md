@@ -1,36 +1,65 @@
-# Algo_Analysis-Assignments
-Assignments from Analysis of Algorithms at CSU East Bay 
 
-# Homework 1
+# CS 401 Quiz 3
 
-## (1) 
-```c++
-int main() {
-    int n;
-    int duplicates = 0;
+  
 
-    cout << "Indicate number of integers: ";
-    cin >> n;
-    int ary[n];
+### Manufacturing Robot Control System
 
-    for (int i = 0; i < n; i++) {
-        cout << "Enter a integer: ";
-        cin >> ary[i];
-    }
+### Q1
 
-    for (int i = 0; i < n; i++) {
-        for (int j = i + 1; j < n; j++) {
-            if (ary[i] == ary[j]) {
-                duplicates++;
-            }
-        }
-    }
+#### ( a )
+### Subsystems 
+- Control System  - Interacts and processes sensor information and calculates current position and velocity of the Robotic arm.  
+- Servo Motors (3 arm joints) - is dependent on the control system to update motor positions.  
 
-    cout << "\nTotal number of duplicates: " << duplicates << endl;  
+### Interfaces 
+- Accelerometer - data of measurements along the xyz axis.  
+- Image Sensor - visual feedback.  
 
-    return 0;
-}
+#### ( b )
+
+```mermaid
+graph LR
+A[Control System] --> B[Servo Motors]
+C((Accelerometer)) --- A
+D((Image Sensor)) --- A
 ```
-![Question 1](images/hw1Q1.jpeg)
+#### ( c )
 
+The Control System will identify and properly handle errors or miscalculations.  
 
+### Q2
+
+#### ( a )
+1.  To incorporate the requirement of a new image interface I would reconfigure the method in the control system class that gathers the image data to be able to gather the newly formatted data.  
+2. 
+
+#### ( b )
+1.  
+     - Software Subsystem
+     - Control System
+     - Robotic Arm 
+     - ImageSensor
+     - Accelerometer 
+     - ServoMotors  
+     - parts 
+2.  ``` mermaid
+    classDiagram 
+     Control System {
+             velocity
+             updateServoMotor()
+      }
+      ImageSensor {
+            foreignObjectDetected 
+            collectDate()
+      }
+      Accelerometer {
+            x-coordinate
+            collectData()
+      } 
+      ServoMotor {
+          turnDegrees()
+      }
+ 
+ 3.  
+    
