@@ -29,7 +29,9 @@ The Control System will identify and properly handle errors or miscalculations.
 #### ( a )
 i.  To incorporate the requirement of a new image interface I would reconfigure the method in the control system class that gathers the image data to be able to gather the newly formatted data.  
 
-ii.    ![Class Diagram](images/swe2a.png)
+ii.   
+
+![Class Diagram](images/swe2a.png)
    
 
 #### ( b )
@@ -63,5 +65,6 @@ ii.
       }
  
  iii. 
+ 
   ![Full Class Diagram](images/swe2b.png)
     
