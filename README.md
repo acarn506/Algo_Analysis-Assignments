@@ -18,12 +18,8 @@
 
 #### ( b )
 
-```mermaid
-graph LR
-A[Control System] --> B[Servo Motors]
-C((Accelerometer)) --- A
-D((Image Sensor)) --- A
-```
+ ![Component Diagram](images/swe1b.png)
+ 
 #### ( c )
 
 The Control System will identify and properly handle errors or miscalculations.  
@@ -31,11 +27,13 @@ The Control System will identify and properly handle errors or miscalculations.
 ### Q2
 
 #### ( a )
-1.  To incorporate the requirement of a new image interface I would reconfigure the method in the control system class that gathers the image data to be able to gather the newly formatted data.  
-2. 
+i.  To incorporate the requirement of a new image interface I would reconfigure the method in the control system class that gathers the image data to be able to gather the newly formatted data.  
+
+ii.    ![Class Diagram](images/swe2a.png)
+   
 
 #### ( b )
-1.  
+i.  
      - Software Subsystem
      - Control System
      - Robotic Arm 
@@ -43,23 +41,27 @@ The Control System will identify and properly handle errors or miscalculations.
      - Accelerometer 
      - ServoMotors  
      - parts 
-2.  ``` mermaid
+     
+ii. 
+
+    ``` mermaid
     classDiagram 
      Control System {
-             velocity
-             updateServoMotor()
+        velocity
+        updateServoMotor()
       }
       ImageSensor {
-            foreignObjectDetected 
-            collectDate()
+        foreignObjectDetected 
+        collectDate()
       }
       Accelerometer {
-            x-coordinate
-            collectData()
+        x-coordinate
+        collectData()
       } 
       ServoMotor {
-          turnDegrees()
+        turnDegrees()
       }
  
- 3.  
+ iii. 
+  ![Full Class Diagram](images/swe2b.png)
     
